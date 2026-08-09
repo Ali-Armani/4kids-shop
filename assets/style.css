@@ -366,3 +366,90 @@ img {
     font-size: 0.9rem;
 }
 
+/* =========================
+   10. Responsive
+========================= */
+
+@media (max-width: 900px) {
+
+    .site-header .container {
+        flex-wrap: wrap;
+        padding: 18px 0;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .site-header .container {
+        min-height: auto;
+    }
+
+    .logo {
+        font-size: 1.7rem;
+    }
+
+    .header-actions button {
+        padding: 7px 10px;
+        font-size: 0.85rem;
+    }
+
+    .main-nav {
+        gap: 14px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 4px;
+    }
+
+    .main-nav a {
+        flex-shrink: 0;
+        font-size: 0.85rem;
+    }
+
+
+    .hero {
+        min-height: 520px;
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+
+    .categories,
+    .products,
+    .about {
+        padding: 70px 0;
+    }
+
+    .category-list {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+}
+
