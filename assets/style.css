@@ -1,1 +1,58 @@
+/* =========================
+   1. Reset
+========================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================
+   2. Base
+========================= */
+
+:root {
+    --primary-color: #e85d75;
+    --secondary-color: #f7c8d2;
+    --dark-color: #333;
+    --light-color: #fff;
+    --background-color: #fff8f9;
+    --border-color: #eee;
+}
+
+
+/* =========================
+   3. Container
+========================= */
+
+.container {
+    width: min(1120px, 90%);
+    margin-inline: auto;
+}
