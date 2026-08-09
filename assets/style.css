@@ -315,3 +315,37 @@ img {
     font-weight: 700;
 }
 
+/* =========================
+   8. About
+========================= */
+
+.about {
+    padding: 100px 0;
+    background-color: var(--light-color);
+}
+
+.about-content {
+    max-width: 760px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.about-content > span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.about-content h2 {
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.3;
+}
+
+.about-content p {
+    color: #666;
+    font-size: 1rem;
+}
