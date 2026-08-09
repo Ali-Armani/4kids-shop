@@ -259,3 +259,59 @@ img {
     color: #666;
     font-size: 0.95rem;
 }
+
+/* =========================
+   7. Products
+========================= */
+
+.products {
+    padding: 100px 0;
+    background-color: var(--background-color);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.product-card {
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background-color: var(--light-color);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin-bottom: 8px;
+    color: var(--dark-color);
+    font-size: 1.05rem;
+}
+
+.product-info p {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
