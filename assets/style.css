@@ -366,6 +366,10 @@ img {
     font-size: 0.9rem;
 }
 
+.footer-link:hover {
+    color: rgb(134, 113, 251);
+}
+
 /* =========================
    10. Responsive
 ========================= */
