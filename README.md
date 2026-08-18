@@ -178,5 +178,5 @@ Unless otherwise stated, the website design, content, branding, images, and othe
 
 <p align="center">
   <strong>4KIDS</strong><br>
-  Toys • Fun • Creativity
+  Dolls • Fun • Creativity
 </p>
