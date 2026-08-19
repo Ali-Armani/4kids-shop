@@ -388,6 +388,15 @@ img {
     font-size: 1rem;
 }
 
+.social-media-link {
+    transition: color 0.3s ease;
+}
+
+.social-media-link:hover {
+    color: var(--primary-color);
+    font-size: 1.025rem;
+}
+
 /* ===================================================================
                                 Footer
 ====================================================================== */
