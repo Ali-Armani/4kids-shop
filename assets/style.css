@@ -302,6 +302,13 @@ img {
     background-color: #f4f4f4;
     color: #888;
     font-size: 0.9rem;
+    overflow: hidden;
+}
+
+.popular-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .popular-info {
