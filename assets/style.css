@@ -265,21 +265,21 @@ img {
 }
 
 /* ===================================================================
-                                Products
+                                Popular
 ====================================================================== */
 
-.products {
+.popular {
     padding: 100px 0;
     background-color: var(--background-color);
 }
 
-.product-grid {
+.popular-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
 
-.product-card {
+.popular-card {
     overflow: hidden;
     border: 1px solid var(--border-color);
     border-radius: 16px;
@@ -289,12 +289,12 @@ img {
         box-shadow 0.2s ease;
 }
 
-.product-card:hover {
+.popular-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-.product-image {
+.popular-image {
     aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
@@ -304,17 +304,17 @@ img {
     font-size: 0.9rem;
 }
 
-.product-info {
+.popular-info {
     padding: 20px;
 }
 
-.product-info h3 {
+.popular-info h3 {
     margin-bottom: 8px;
     color: var(--dark-color);
     font-size: 1.05rem;
 }
 
-.product-info p {
+.popular-info p {
     color: var(--primary-color);
     font-weight: 700;
 }
