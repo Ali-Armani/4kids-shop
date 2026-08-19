@@ -405,18 +405,18 @@ img {
                             Responsive
 ====================================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
 
     .site-header .container {
         flex-wrap: wrap;
-        padding: 18px 0;
+        padding: 1.125rem 0;
     }
 
     .main-nav {
         order: 3;
         width: 100%;
         justify-content: center;
-        gap: 20px;
+        gap: 1.25rem;
     }
 
     .product-grid {
@@ -426,7 +426,7 @@ img {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
 
     .site-header .container {
         min-height: auto;
@@ -437,15 +437,15 @@ img {
     }
 
     .header-actions button {
-        padding: 7px 10px;
+        padding: 0.4375rem 0.625rem;
         font-size: 0.85rem;
     }
 
     .main-nav {
-        gap: 14px;
+        gap: 0.875rem;
         overflow-x: auto;
         justify-content: flex-start;
-        padding-bottom: 4px;
+        padding-bottom: 0.25rem;
     }
 
     .main-nav a {
@@ -455,8 +455,8 @@ img {
 
 
     .hero {
-        min-height: 520px;
-        padding: 70px 0;
+        min-height: 32.5rem;
+        padding: 4.375rem 0;
     }
 
     .hero h1 {
@@ -471,7 +471,7 @@ img {
     .categories,
     .products,
     .about {
-        padding: 70px 0;
+        padding: 4.375rem 0;
     }
 
     .category-list {
@@ -483,7 +483,7 @@ img {
     }
 
     .section-heading {
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
     }
 
 }
