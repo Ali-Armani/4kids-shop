@@ -324,26 +324,26 @@ img {
 ====================================================================== */
 
 .about {
-    padding: 100px 0;
+    padding: 6.25rem 0;
     background-color: var(--light-color);
 }
 
 .about-content {
-    max-width: 760px;
+    max-width: 47.625rem;
     margin-inline: auto;
     text-align: center;
 }
 
 .about-content > span {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     color: var(--primary-color);
     font-size: 0.9rem;
     font-weight: 700;
 }
 
 .about-content h2 {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     color: var(--dark-color);
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     line-height: 1.3;
