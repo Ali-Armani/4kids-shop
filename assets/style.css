@@ -61,6 +61,10 @@ img {
                                 Header
 ====================================================================== */
 
+.cart-button {
+    display: none;
+}
+
 .site-header {
     background-color: var(--light-color);
     border-bottom: 1px solid var(--border-color);
