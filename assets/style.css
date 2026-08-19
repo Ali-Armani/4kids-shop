@@ -74,18 +74,18 @@ img {
 }
 
 .site-header .container {
-    min-height: 72px;
+    min-height: 4.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 32px;
+    gap: 2rem;
 }
 
 
 /* Logo */
 
 .logo {
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 800;
     color: var(--primary-color);
     letter-spacing: -1px;
@@ -97,11 +97,11 @@ img {
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 1.75rem;
 }
 
 .main-nav a {
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 500;
     color: var(--dark-color);
     transition: color 0.2s ease;
@@ -117,15 +117,15 @@ img {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .header-actions button {
     border: 1px solid var(--border-color);
     background-color: var(--light-color);
     color: var(--dark-color);
-    padding: 8px 14px;
-    border-radius: 8px;
+    padding: 0.5rem 0.875rem;
+    border-radius: 0.5rem;
     cursor: pointer;
     transition:
         background-color 0.2s ease,
