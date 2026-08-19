@@ -359,18 +359,18 @@ img {
 ====================================================================== */
 
 .contact {
-    padding: 100px 0;
+    padding: 6.25rem 0;
     background-color: var(--light-color);
 }
 
 .contact-content {
-    max-width: 760px;
+    max-width: 47.5rem;
     margin-inline: auto;
     text-align: center;
 }
 
 .contact-content h2 {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     color: var(--dark-color);
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     line-height: 1.3;
