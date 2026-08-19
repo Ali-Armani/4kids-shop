@@ -419,7 +419,7 @@ img {
         gap: 1.25rem;
     }
 
-    .product-grid {
+    .popular-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -478,7 +478,7 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .product-grid {
+    .popular-grid {
         grid-template-columns: 1fr;
     }
 
