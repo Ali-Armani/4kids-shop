@@ -386,7 +386,7 @@ img {
 ====================================================================== */
 
 .site-footer {
-    padding: 30px 0;
+    padding: 1.875rem 0;
     background-color: var(--dark-color);
     color: var(--light-color);
     text-align: center;
