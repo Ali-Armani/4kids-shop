@@ -351,6 +351,33 @@ img {
 }
 
 /* ===================================================================
+                                Contact
+====================================================================== */
+
+.contact {
+    padding: 100px 0;
+    background-color: var(--light-color);
+}
+
+.contact-content {
+    max-width: 760px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.contact-content h2 {
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.3;
+}
+
+.contact-content p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* ===================================================================
                                 Footer
 ====================================================================== */
 
