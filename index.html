@@ -5,288 +5,373 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>4KIDS | فروشگاه عروسک و اکسسوری مو</title>
   <meta name="description" content="4KIDS؛ فروشگاه عروسک و اکسسوری مو، با انتخابی متنوع از عروسک‌ها و اکسسوری‌های جذاب، مناسب هدیه و استفاده روزمره، با ارسال به سراسر کشور.">
+  <link rel="canonical" href="https://example.com/">
+  <meta property="og:title" content="4KIDS | فروشگاه عروسک و اکسسوری مو">
+  <meta property="og:description" content="فروشگاه عروسک و اکسسوری مو با ارسال به سراسر کشور.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fa_IR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  
-    <!-- Header -->
-    <header class="site-header">
 
-        <div class="container">
+  <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
 
-            <a href="/" class="logo">
-                4kids
-            </a>
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobileNav">
+        <span class="burger"></span>
+      </button>
 
-            <nav class="main-nav" aria-label="منوی اصلی">
-                <a href="#home">خانه</a>
-                <a href="#popular">محبوب‌ترین‌ها</a>
-                <a href="#categories">دسته‌بندی‌ها</a>
-                <a href="#about">درباره ما</a>
-                <a href="#contact">تماس با ما</a>
-            </nav>
+      <a href="#main" class="brand">
+        <span class="brand-mark" aria-hidden="true">4K</span>
+        <span class="brand-name">4KIDS</span>
+      </a>
 
-            <div class="header-actions">
-                <button type="button" aria-label="جستجو">
-                    جستجو
-                </button>
+      <nav class="main-nav" aria-label="ناوبری اصلی">
+        <ul>
+          <li><a href="#home">خانه</a></li>
+          <li><a href="#bestsellers">محبوب‌ترین‌ها</a></li>
+          <li><a href="#categories">دسته‌بندی‌ها</a></li>
+          <li><a href="#catalog">محصولات</a></li>
+          <li><a href="#about">درباره ما</a></li>
+          <li><a href="#faq">سوالات متداول</a></li>
+          <li><a href="#contact">تماس با ما</a></li>
+        </ul>
+      </nav>
 
-                <button class="cart-button" type="button" aria-label="سبد خرید">
-                    سبد خرید
-                </button>
-            </div>
+      <div class="header-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="جست‌وجو" aria-expanded="false" aria-controls="searchPanel">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn" id="wishlistToggle" aria-label="علاقه‌مندی‌ها">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 20s-7.5-4.6-10-9.3C.5 6.6 2.6 3 6.3 3 8.6 3 10.5 4.3 12 6.3 13.5 4.3 15.4 3 17.7 3 21.4 3 23.5 6.6 22 10.7 19.5 15.4 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span class="badge" id="wishlistCount" hidden>0</span>
+        </button>
+        <button class="icon-btn" id="cartToggle" aria-label="سبد خرید" aria-expanded="false" aria-controls="cartDrawer">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.4a2 2 0 0 0 2-1.6L21 8H6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="21" r="1.4" fill="currentColor"/><circle cx="18" cy="21" r="1.4" fill="currentColor"/></svg>
+          <span class="badge" id="cartCount" hidden>0</span>
+        </button>
+      </div>
+    </div>
 
+    <!-- Search panel -->
+    <div class="search-panel" id="searchPanel" hidden>
+      <div class="container search-panel-inner">
+        <label for="searchInput" class="sr-only">جست‌وجوی محصول</label>
+        <input type="search" id="searchInput" placeholder="نام محصول یا دسته‌بندی را جست‌وجو کنید…" autocomplete="off">
+        <button id="searchClear" class="text-btn" type="button" hidden>پاک کردن</button>
+      </div>
+      <div class="container">
+        <p id="searchStatus" class="search-status" role="status" aria-live="polite"></p>
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="ناوبری موبایل" hidden>
+      <ul>
+        <li><a href="#home">خانه</a></li>
+        <li><a href="#bestsellers">محبوب‌ترین‌ها</a></li>
+        <li><a href="#categories">دسته‌بندی‌ها</a></li>
+        <li><a href="#catalog">محصولات</a></li>
+        <li><a href="#about">درباره ما</a></li>
+        <li><a href="#faq">سوالات متداول</a></li>
+        <li><a href="#contact">تماس با ما</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">از بازار ساحلی بندر ترکمن</p>
+          <h1>هدیه‌ای که دلش می‌ماند<br>پیش هر دختری</h1>
+          <p class="hero-desc">4KIDS از سال ۱۳۸۶ زیر نام «عروسک‌فروشی قزل» کنار اسکله شروع کرد؛ حالا با عروسک‌های اورجینال، اکسسوری مو و هدایای فانتزی، کنار دختران و زنان سراسر ایران است.</p>
+          <div class="hero-actions">
+            <a href="#catalog" class="btn btn-primary">مشاهده محصولات</a>
+            <a href="#bestsellers" class="btn btn-ghost">محبوب‌ترین‌ها</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-blob"></div>
+          <div class="hero-card hero-card-1">🧸</div>
+          <div class="hero-card hero-card-2">🎀</div>
+          <div class="hero-card hero-card-3">🐄</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Best sellers ===== -->
+    <section class="section" id="bestsellers">
+      <div class="container">
+        <div class="section-head">
+          <h2>محبوب‌ترین‌ها</h2>
+          <p>پرفروش‌ترین عروسک‌های فروشگاه، انتخاب قطعی مشتریان ما</p>
+        </div>
+        <div class="product-grid" id="bestsellerGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Categories ===== -->
+    <section class="section section-alt" id="categories">
+      <div class="container">
+        <div class="section-head">
+          <h2>دسته‌بندی‌ها</h2>
+          <p>هر آنچه برای هدیه، دکور و استفاده روزمره لازم دارید</p>
+        </div>
+        <div class="category-grid" id="categoryGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Catalog ===== -->
+    <section class="section" id="catalog">
+      <div class="container">
+        <div class="section-head">
+          <h2>محصولات</h2>
+          <p>در میان همه محصولات بگردید، فیلتر کنید و مرتب‌سازی کنید</p>
         </div>
 
-    </header>
-
-  
-      <main>
-
-        <!-- Hero -->
-        <section class="hero" id="home">
-
-            <div class="container">
-
-                <div class="hero-content">
-
-                    <span class="hero-label">
-                      دنیای شیرین دختران
-                    </span>
-
-                    <h1>
-                        عروسک‌هایی برای
-                        <span>لبخندهای زیبا</span>
-                    </h1>
-
-                    <p>
-                        مجموعه‌ای از عروسک‌های دوست‌داشتنی و اکسسوری‌های زیبای مو<br>
-                        برای ساختن لحظه‌های شیرین و خاطره‌انگیز
-                    </p>
-
-                    <a href="#categories" class="btn">
-                        مشاهده محصولات
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Popular -->
-        <section class="popular" id="popular">
-
-            <div class="container">
-
-                <div class="section-heading">
-                    <h2>محبوب ترین های شما</h2>
-                </div>
-
-                <div class="popular-grid">
-
-
-                   <article class="popular-card">
-                        <div class="popular-image">
-                            <img src="assets/images/dolls/running-cow-doll.jpg" alt="عروسک گاو دونده اورجینال">
-                        </div>
-
-                        <div class="popular-info">
-                            <h3>گاو دونده اورجینال</h3>
-                            <p>3,850,000 تومان</p>
-                        </div>
-                    </article>
-
-
-                    <article class="popular-card">
-                        <div class="popular-image">
-                            <img src="assets/images/dolls/large-imported-bear-doll.jpg" alt="عروسک خرس وارداتی سایز بزرگ اورجینال">
-                        </div>
-
-                        <div class="popular-info">
-                            <h3>خرس سایز بزرگ اورجینال</h3>
-                            <p>7,500,000 تومان</p>
-                        </div>
-                    </article>
-
-
-                    <article class="popular-card">
-                        <div class="popular-image">
-                            <img src="assets/images/dolls/large-stitch-doll.jpg" alt="عروسک استیچ سایز بزرگ اورجینال">
-                        </div>
-
-                        <div class="popular-info">
-                            <h3>استیچ سایز بزرگ اورجینال</h3>
-                            <p>6,500,000 تومان</p>
-                        </div>
-                    </article>
-
-
-                    <article class="popular-card">
-                        <div class="popular-image">
-                            <img src="assets/images/dolls/kuromi-melody-doll.jpg" alt="عروسک کرومی و ملودی">
-                        </div>
-
-                        <div class="popular-info">
-                            <h3>کرومی و ملودی</h3>
-                            <p>5 سایزبندی دارد
-                            <br>
-                              950,000 تا 3,550,000 تومان 
-                            </p>
-                        </div>
-                    </article>
-                  
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Categories -->
-        <section class="categories" id="categories">
-
-            <div class="container">
-
-                <div class="section-heading">
-                    <span>دسته‌بندی‌ها</span>
-                    <h2>دنیای 4kids را کشف کنید</h2>
-                </div>
-
-                <div class="category-list">
-
-                    <a href="#" class="category-card">
-                        <h3>عروسک‌ها</h3>
-                        <p>دوست‌های دوست‌داشتنی کودکان</p>
-                    </a>
-
-                    <a href="#" class="category-card">
-                        <h3>عروسک‌های پولیشی</h3>
-                        <p>نرم، بامزه و دوست‌داشتنی</p>
-                    </a>
-
-                    <a href="#" class="category-card">
-                        <h3>اسباب‌بازی</h3>
-                        <p>سرگرمی برای ساعت‌ها بازی</p>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- About -->
-        <section class="about" id="about">
-
-            <div class="container">
-
-                <div class="about-content">
-
-    <h2>درباره 4kids</h2>
-
-    <p>
-        4KIDS Shop فعالیت خود را از سال <strong>۱۳۸۶</strong> در بازارچه ساحلی
-        <strong>اسکله</strong>، با نام <strong>"عروسک‌فروشی قزل"</strong> آغاز کرد.
-        از همان روزهای نخست، رضایت و اعتماد مشتریان برای ما مهم‌ترین سرمایه بوده
-        و تا امروز نیز همین نگاه، پایه و اساس فعالیت ماست.
-    </p>
-
-    <p>
-        ما در 4KIDS تلاش می‌کنیم محصولاتی را انتخاب و عرضه کنیم که علاوه بر
-        <strong>ظاهر زیبا و جذاب</strong>،
-        از <strong>کیفیت مناسب و دوام بالا</strong> برخوردار باشند. 🧸
-    </p>
-
-    <p>
-        در انتخاب عروسک‌ها، توجه ویژه‌ای به کیفیت،
-        <strong>قابل شست‌وشو</strong> بودن و <strong>ضدحساسیت</strong> بودن
-        محصولات داریم. در بخش جاکلیدی نیز خاص بودن و دوام را مورد توجه قرار می‌دهیم.
-    </p>
-
-    <p>
-        همچنین در انتخاب کلیپس و اکسسوری‌های مو، به
-        <strong>برند، کیفیت، دوام و به‌روز بودن محصولات</strong>
-        توجه داریم تا بتوانیم انتخاب‌هایی زیبا و کاربردی برای شما فراهم کنیم.
-    </p>
-
-    <p>
-        در تمام این سال‌ها تلاش کرده‌ایم تجربه‌ای مطمئن و رضایت‌بخش برای
-        مشتریانمان ایجاد کنیم؛ چون باور داریم:
-        <br>
-        <strong>رضایت شما، اولویت ماست. 💖</strong>
-    </p>
-    <br>
-    <h4>ارسال به تمامی نقاط ایران</h4>
-
-    <p>
-        محصولات 4KIDS را می‌توانید از هر نقطه ایران سفارش دهید و ما سفارش‌ها
-        را به <strong>سراسر کشور ارسال</strong> می‌کنیم.
-    </p>
-
-    <p>
-        از اینکه 4KIDS را برای خرید خود انتخاب می‌کنید، از شما سپاسگزاریم. 💕
-    </p>
-    <br>
-    <h4>آدرس ما:</h4>
-
-    <p>
-        <strong>بندر ترکمن - بین آزادی 4 و 6 - جنب رستوران قزل</strong>
-    </p>
-
-</div>
-
-            </div>
-
-        </section>
-
-        <section class="contact" id="contact">
-
-            <div class="container">
-
-                <div class="contact-content">
-
-    <h2>تماس با ما</h2>
-
-    <h4>شماره تماس:</h4>
-    <p>
-        0938-517-5930<br>
-        0911-388-0126
-    </p>
-    <br>
-    <h4>اینستاگرام:</h4>
-    <p>
-    <a href="https://www.instagram.com/4kids_shop2025/" target="_blank" rel="noopener noreferrer" class="social-media-link">
-        4kids_shop2025
-    </a>
-    </p>
-    <br>
-    <h4>تلگرام / واتساپ:</h4>
-    <p>
-        0938-517-5930
-    </p>
-
-</div>
-              
-            </div>
-
-        </section>
-
-    </main>
-
-      <!-- Footer -->
-    <footer class="site-footer">
-
-        <div class="container">
-
-            <p>
-                4kids - Designed by <a href="https://ali-armani.github.io" target="_blank" rel="noopener noreferrer" class="footer-link">Ali Armani</a> © 
-            </p>
-
+        <div class="catalog-toolbar">
+          <div class="filter-group">
+            <label for="filterCategory">دسته‌بندی</label>
+            <select id="filterCategory">
+              <option value="all">همه دسته‌ها</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filterAvailability">وضعیت</label>
+            <select id="filterAvailability">
+              <option value="all">همه وضعیت‌ها</option>
+              <option value="available">موجود</option>
+              <option value="soon">به‌زودی</option>
+              <option value="unavailable">ناموجود</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filterPrice">محدوده قیمت</label>
+            <select id="filterPrice">
+              <option value="all">همه قیمت‌ها</option>
+              <option value="0-1000000">تا ۱٬۰۰۰٬۰۰۰ تومان</option>
+              <option value="1000000-4000000">۱ تا ۴ میلیون تومان</option>
+              <option value="4000000-8000000">۴ تا ۸ میلیون تومان</option>
+              <option value="8000000-999999999">بالای ۸ میلیون تومان</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="sortBy">مرتب‌سازی</label>
+            <select id="sortBy">
+              <option value="newest">جدیدترین</option>
+              <option value="cheapest">ارزان‌ترین</option>
+              <option value="expensive">گران‌ترین</option>
+              <option value="popular">محبوب‌ترین</option>
+            </select>
+          </div>
         </div>
 
-    </footer>
-  
+        <p id="catalogStatus" class="catalog-status" role="status" aria-live="polite"></p>
+        <div class="product-grid" id="catalogGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Recently viewed ===== -->
+    <section class="section section-alt" id="recentlyViewedSection" hidden>
+      <div class="container">
+        <div class="section-head">
+          <h2>محصولات مشاهده‌شده اخیر</h2>
+        </div>
+        <div class="product-grid" id="recentGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Promo banner ===== -->
+    <section class="promo">
+      <div class="container promo-inner">
+        <h2>هدیه‌ای مخصوص، برای آدم‌های خاص</h2>
+        <p>مجموعه عروسک‌های سورپرایزی 4KIDS، برای لحظه‌های غافلگیری</p>
+        <a href="#catalog" class="btn btn-light">مشاهده مجموعه</a>
+      </div>
+    </section>
+
+    <!-- ===== Trust ===== -->
+    <section class="section" id="trust">
+      <div class="container">
+        <div class="section-head">
+          <h2>چرا 4KIDS؟</h2>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-card">
+            <span class="trust-icon" aria-hidden="true">🚚</span>
+            <h3>ارسال به سراسر کشور</h3>
+            <p>سفارش شما با پست به تمام نقاط ایران ارسال می‌شود.</p>
+          </div>
+          <div class="trust-card">
+            <span class="trust-icon" aria-hidden="true">✨</span>
+            <h3>توجه به کیفیت</h3>
+            <p>انتخاب و بررسی محصولات با دقت، پیش از عرضه به فروشگاه.</p>
+          </div>
+          <div class="trust-card">
+            <span class="trust-icon" aria-hidden="true">🏪</span>
+            <h3>سابقه‌ای طولانی</h3>
+            <p>فعالیت مستمر از سال ۱۳۸۶ در بازار ساحلی بندر ترکمن.</p>
+          </div>
+          <div class="trust-card">
+            <span class="trust-icon" aria-hidden="true">💬</span>
+            <h3>پشتیبانی مشتری</h3>
+            <p>پاسخ‌گویی به سوالات شما پیش و پس از خرید.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reviews ===== -->
+    <section class="section section-alt" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <h2>نظرات مشتریان</h2>
+          <p class="demo-note">نمونه نظرات — قابل جایگزینی با نظرات واقعی مشتریان</p>
+        </div>
+        <div class="review-grid" id="reviewGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container about-inner">
+        <div class="about-text">
+          <h2>درباره 4KIDS</h2>
+          <p>فروشگاه 4KIDS فعالیت خود را از سال ۱۳۸۶ در بازار ساحلی، نزدیک اسکله، با نام «عروسک‌فروشی قزل» آغاز کرد. از آن روز تا امروز، رضایت مشتری اولویت اصلی ما بوده است.</p>
+          <p>در انتخاب عروسک‌ها به کیفیت، قابلیت شست‌وشو و مناسب بودن برای پوست حساس توجه می‌کنیم. جاکلیدی‌ها را برای ماندگاری و طراحی خاص انتخاب می‌کنیم و در اکسسوری مو، کیفیت برند، دوام و طرح‌های به‌روز را در نظر می‌گیریم.</p>
+          <p>محصولات ما به سراسر ایران ارسال می‌شود.</p>
+        </div>
+        <div class="about-address">
+          <h3>نشانی فروشگاه</h3>
+          <p>بندر ترکمن، بین آزادی ۴ و ۶، جنب رستوران قزل</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Shipping ===== -->
+    <section class="section section-alt" id="shipping">
+      <div class="container">
+        <div class="section-head">
+          <h2>اطلاعات ارسال</h2>
+        </div>
+        <div class="shipping-card">
+          <p><strong>ارسال به سراسر کشور</strong> — سفارش‌های شما به تمامی استان‌های ایران ارسال می‌شود.</p>
+          <p class="demo-note">هزینه و زمان تحویل بسته به شهر مقصد متفاوت است؛ این بخش پس از اتصال به سیستم سفارش، تکمیل خواهد شد.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>سوالات متداول</h2>
+        </div>
+        <div class="accordion" id="faqAccordion"></div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>تماس با ما</h2>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-card" href="tel:09385175930">
+            <span aria-hidden="true">📞</span>
+            <div><strong>تلفن</strong><span dir="ltr">0938-517-5930</span></div>
+          </a>
+          <a class="contact-card" href="tel:09113880126">
+            <span aria-hidden="true">📞</span>
+            <div><strong>تلفن</strong><span dir="ltr">0911-388-0126</span></div>
+          </a>
+          <a class="contact-card" href="https://wa.me/989385175930" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">💬</span>
+            <div><strong>واتس‌اپ / تلگرام</strong><span dir="ltr">0938-517-5930</span></div>
+          </a>
+          <a class="contact-card" href="https://www.instagram.com/4kids_shop2025/" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">📷</span>
+            <div><strong>اینستاگرام</strong><span dir="ltr">4kids_shop2025</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Cart drawer ===== -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="سبد خرید" aria-hidden="true">
+    <div class="cart-header">
+      <h2>سبد خرید</h2>
+      <button class="icon-btn" id="cartClose" aria-label="بستن سبد خرید">✕</button>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>جمع کل</span>
+        <strong id="cartSubtotal">۰ تومان</strong>
+      </div>
+      <button class="btn btn-primary btn-block" id="cartCheckout" disabled>ادامه فرایند خرید</button>
+      <p class="demo-note">این بخش صرفاً نمایشی است؛ پرداخت آنلاین هنوز فعال نیست.</p>
+    </div>
+  </aside>
+
+  <!-- ===== Product detail modal ===== -->
+  <div class="overlay" id="modalOverlay" hidden></div>
+  <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <button class="icon-btn modal-close" id="modalClose" aria-label="بستن">✕</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+  <!-- ===== Notification ===== -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">4K</span>
+        <span class="brand-name">4KIDS</span>
+        <p>فروشگاه عروسک و اکسسوری مو، با هدایای فانتزی و متنوع برای دختران و زنان سراسر ایران.</p>
+      </div>
+      <div class="footer-col">
+        <h3>دسترسی سریع</h3>
+        <ul>
+          <li><a href="#bestsellers">محبوب‌ترین‌ها</a></li>
+          <li><a href="#categories">دسته‌بندی‌ها</a></li>
+          <li><a href="#catalog">محصولات</a></li>
+          <li><a href="#faq">سوالات متداول</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>تماس</h3>
+        <ul>
+          <li dir="ltr">0938-517-5930</li>
+          <li dir="ltr">0911-388-0126</li>
+          <li><a href="https://www.instagram.com/4kids_shop2025/" target="_blank" rel="noopener noreferrer">اینستاگرام 4kids_shop2025</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>ارسال</h3>
+        <p>ارسال به سراسر کشور</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© ۴KIDS — تمامی حقوق محفوظ است.</p>
+    </div>
+  </footer>
+
   <script src="assets/script.js"></script>
 </body>
 </html>
